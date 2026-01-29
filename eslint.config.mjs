@@ -13,6 +13,7 @@ export default withNuxt(
       semi: true,
       quotes: "double",
     },
+    ignores: "",
   }, {
     rules: {
       "ts/consistent-type-definitions": ["error", "type"],
