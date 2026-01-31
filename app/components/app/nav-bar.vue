@@ -7,7 +7,7 @@
       <AppThemeToggle />
       <a class="btn btn-accent">
         Sign In With Github
-        <!-- es lint test for try-parse -->
+        <!-- es lint test for try-parse  -->
         <Icon name="tabler:brand-github" size="24" />
       </a>
     </div>
