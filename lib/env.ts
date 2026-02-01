@@ -1,14 +1,17 @@
-// import { z } from "zod";
+import { z } from "zod";
 
-// import tryParseEnv from "./try-parse-env";
+import tryParseEnv from "./try-parse-env";
 
-// const EnvSchema = z.object({
-//   NODE_ENV: z.string(),
-// });
+const EnvSchema = z.object({
+  NODE_ENV: z.string(),
+  TURSO_DATABASE_URL: z.string(),
+  TURSO_AUTH_TOKEN: z.string(),
 
-// export type EnvSchema2 = z.infer<typeof EnvSchema2>;
+});
 
-// tryParseEnv(EnvSchema2);
+export type EnvSchema2 = z.infer<typeof EnvSchema>;
 
-// // eslint-disable-next-line node/no-process-env
-// export default EnvSchema.parse(process.env);
+tryParseEnv(EnvSchema);
+
+// eslint-disable-next-line node/no-process-env
+export default EnvSchema.parse(process.env);

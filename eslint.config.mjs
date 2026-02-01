@@ -16,7 +16,7 @@ export default withNuxt(
       semi: true,
       quotes: "double",
     },
-    ignores: "",
+    ignores: ["**/migrations/*"],
   }, {
     rules: {
       "ts/consistent-type-definitions": ["error", "type"],
