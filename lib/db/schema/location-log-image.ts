@@ -3,7 +3,7 @@ import { user } from "./auth";
 import { locationLog } from "./location-log";
 
 export const locationLogImage = sqliteTable("locationLogImage", {
-  id: int().primaryKey({ autoIncrement: true }),
+  id: text().primaryKey(),
   key: text().notNull(),
   locationLogId: int().notNull().references(() => locationLog.id),
   userId: int().notNull().references(() => user.id),
