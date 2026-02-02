@@ -3,7 +3,7 @@ import { user } from "./auth";
 import { location } from "./location";
 
 export const locationLog = sqliteTable("locationLog", {
-  id: int().primaryKey({ autoIncrement: true }),
+  id: text().primaryKey(),
   name: text().notNull(),
   description: text(),
   startedAt: int().notNull(),
