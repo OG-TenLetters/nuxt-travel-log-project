@@ -52,7 +52,7 @@ CREATE TABLE `verification` (
 --> statement-breakpoint
 CREATE INDEX `verification_identifier_idx` ON `verification` (`identifier`);--> statement-breakpoint
 CREATE TABLE `location` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
 	`slug` text NOT NULL,
 	`description` text,
@@ -66,7 +66,7 @@ CREATE TABLE `location` (
 --> statement-breakpoint
 CREATE UNIQUE INDEX `location_slug_unique` ON `location` (`slug`);--> statement-breakpoint
 CREATE TABLE `locationLog` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
 	`description` text,
 	`started_at` integer NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `locationLog` (
 );
 --> statement-breakpoint
 CREATE TABLE `locationLogImage` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`id` text PRIMARY KEY NOT NULL,
 	`key` text NOT NULL,
 	`location_log_id` integer NOT NULL,
 	`user_id` integer NOT NULL,

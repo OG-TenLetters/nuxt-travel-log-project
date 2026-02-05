@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "dev:db": "npx turso dev --db-file local.db",
+    "dev": "concurrently \"npm run dev:db\" \"nuxt dev\"",
+    "dev:db": "turso dev --db-file local.db",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
