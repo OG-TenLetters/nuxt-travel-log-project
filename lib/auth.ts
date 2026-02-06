@@ -6,6 +6,11 @@ import env from "./env";
 
 export function getAuth() {
   return betterAuth({
+    baseURL: env.BETTER_AUTH_URL,
+    trustedOrigins: [
+      env.BETTER_AUTH_URL,
+      "http://localhost:3000",
+    ],
     database: drizzleAdapter(db, {
       provider: "sqlite",
     }),
