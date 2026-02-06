@@ -8,7 +8,7 @@ export function getAuth() {
   return betterAuth({
     baseURL: env.BETTER_AUTH_URL,
     trustedOrigins: [
-      env.BETTER_AUTH_URL,
+      "https://nuxt-travel-log-project.vercel.app",
       "http://localhost:3000",
     ],
     database: drizzleAdapter(db, {
